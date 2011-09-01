@@ -8,7 +8,7 @@ require 'hbase'
 
 #--------------------------------------------------------------------------------
 # Connect to hbase
-socket = ::Thrift::Socket.new('hbase.server', 9090, 5) # server, port, timeout
+socket = ::Thrift::Socket.new('localhost', 9090, 5) # server, port, timeout
 transport = ::Thrift::BufferedTransport.new(socket)
 transport.open
 
@@ -17,9 +17,12 @@ client = Apache::Hadoop::Hbase::Thrift::Hbase::Client.new(protocol)
 
 #--------------------------------------------------------------------------------
 # Get a row from hbase
-rows = client.getRowWithColumns('table_name', '123', []) # Get all columns for row_id='123'
-if rows && rows.any?
-  puts "ROW_ID='123', DATA=#{rows.first.columns.inspect}"
-else
-  puts "No rows found"
+
+def get(client, start_key, end_key)
+  scanner = client.scannerOpenWithStop('table', start_key, end_key, []) # Get all columns for row_id='123'
+  results = client.scannerGetList(scanner, 100)
+  results.each {|r| puts r.row}
+  client.scannerClose(scanner)
 end
+
+get(client, '13147', '13149')

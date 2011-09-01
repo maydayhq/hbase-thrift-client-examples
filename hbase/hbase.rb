@@ -7,6 +7,7 @@
 require 'thrift'
 require 'hbase_types'
 
+
 module Apache
   module Hadoop
     module Hbase
@@ -958,1387 +959,1348 @@ module Apache
           # HELPER FUNCTIONS AND STRUCTURES
 
           class EnableTable_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
 
-            ::Thrift::Struct.field_accessor self, :tableName
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'}
+              # name of the table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class EnableTable_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :io
             FIELDS = {
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class DisableTable_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
 
-            ::Thrift::Struct.field_accessor self, :tableName
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'}
+              # name of the table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class DisableTable_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :io
             FIELDS = {
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class IsTableEnabled_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
 
-            ::Thrift::Struct.field_accessor self, :tableName
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'}
+              # name of the table to check
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class IsTableEnabled_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::BOOL, :name => 'success'},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::BOOL, :name => 'success'},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class Compact_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAMEORREGIONNAME = 1
 
-            ::Thrift::Struct.field_accessor self, :tableNameOrRegionName
             FIELDS = {
-                    TABLENAMEORREGIONNAME => {:type => ::Thrift::Types::STRING, :name => 'tableNameOrRegionName'}
+              TABLENAMEORREGIONNAME => {:type => ::Thrift::Types::STRING, :name => 'tableNameOrRegionName', :binary => true}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class Compact_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :io
             FIELDS = {
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class MajorCompact_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAMEORREGIONNAME = 1
 
-            ::Thrift::Struct.field_accessor self, :tableNameOrRegionName
             FIELDS = {
-                    TABLENAMEORREGIONNAME => {:type => ::Thrift::Types::STRING, :name => 'tableNameOrRegionName'}
+              TABLENAMEORREGIONNAME => {:type => ::Thrift::Types::STRING, :name => 'tableNameOrRegionName', :binary => true}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class MajorCompact_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :io
             FIELDS = {
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetTableNames_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
 
             FIELDS = {
 
-                    }
+            }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetTableNames_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRING}},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRING, :binary => true}},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetColumnDescriptors_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
 
-            ::Thrift::Struct.field_accessor self, :tableName
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'}
+              # table name
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetColumnDescriptors_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::MAP, :name => 'success', :key => {:type => ::Thrift::Types::STRING}, :value => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::ColumnDescriptor}},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::MAP, :name => 'success', :key => {:type => ::Thrift::Types::STRING, :binary => true}, :value => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::ColumnDescriptor}},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetTableRegions_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
 
-            ::Thrift::Struct.field_accessor self, :tableName
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'}
+              # table name
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetTableRegions_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TRegionInfo}},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TRegionInfo}},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class CreateTable_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             COLUMNFAMILIES = 2
 
-            ::Thrift::Struct.field_accessor self, :tableName, :columnFamilies
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    COLUMNFAMILIES => {:type => ::Thrift::Types::LIST, :name => 'columnFamilies', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::ColumnDescriptor}}
+              # name of table to create
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # list of column family descriptors
+              COLUMNFAMILIES => {:type => ::Thrift::Types::LIST, :name => 'columnFamilies', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::ColumnDescriptor}}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class CreateTable_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             IO = 1
             IA = 2
             EXIST = 3
 
-            ::Thrift::Struct.field_accessor self, :io, :ia, :exist
             FIELDS = {
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
-                    IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument},
-                    EXIST => {:type => ::Thrift::Types::STRUCT, :name => 'exist', :class => Apache::Hadoop::Hbase::Thrift::AlreadyExists}
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
+              IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument},
+              EXIST => {:type => ::Thrift::Types::STRUCT, :name => 'exist', :class => Apache::Hadoop::Hbase::Thrift::AlreadyExists}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class DeleteTable_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
 
-            ::Thrift::Struct.field_accessor self, :tableName
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'}
+              # name of table to delete
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class DeleteTable_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :io
             FIELDS = {
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class Get_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROW = 2
             COLUMN = 3
 
-            ::Thrift::Struct.field_accessor self, :tableName, :row, :column
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROW => {:type => ::Thrift::Types::STRING, :name => 'row'},
-                    COLUMN => {:type => ::Thrift::Types::STRING, :name => 'column'}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # row key
+              ROW => {:type => ::Thrift::Types::STRING, :name => 'row', :binary => true},
+              # column name
+              COLUMN => {:type => ::Thrift::Types::STRING, :name => 'column', :binary => true}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class Get_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TCell}},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TCell}},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetVer_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROW = 2
             COLUMN = 3
             NUMVERSIONS = 4
 
-            ::Thrift::Struct.field_accessor self, :tableName, :row, :column, :numVersions
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROW => {:type => ::Thrift::Types::STRING, :name => 'row'},
-                    COLUMN => {:type => ::Thrift::Types::STRING, :name => 'column'},
-                    NUMVERSIONS => {:type => ::Thrift::Types::I32, :name => 'numVersions'}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # row key
+              ROW => {:type => ::Thrift::Types::STRING, :name => 'row', :binary => true},
+              # column name
+              COLUMN => {:type => ::Thrift::Types::STRING, :name => 'column', :binary => true},
+              # number of versions to retrieve
+              NUMVERSIONS => {:type => ::Thrift::Types::I32, :name => 'numVersions'}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetVer_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TCell}},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TCell}},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetVerTs_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROW = 2
             COLUMN = 3
             TIMESTAMP = 4
             NUMVERSIONS = 5
 
-            ::Thrift::Struct.field_accessor self, :tableName, :row, :column, :timestamp, :numVersions
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROW => {:type => ::Thrift::Types::STRING, :name => 'row'},
-                    COLUMN => {:type => ::Thrift::Types::STRING, :name => 'column'},
-                    TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'},
-                    NUMVERSIONS => {:type => ::Thrift::Types::I32, :name => 'numVersions'}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # row key
+              ROW => {:type => ::Thrift::Types::STRING, :name => 'row', :binary => true},
+              # column name
+              COLUMN => {:type => ::Thrift::Types::STRING, :name => 'column', :binary => true},
+              # timestamp
+              TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'},
+              # number of versions to retrieve
+              NUMVERSIONS => {:type => ::Thrift::Types::I32, :name => 'numVersions'}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetVerTs_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TCell}},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TCell}},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetRow_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROW = 2
 
-            ::Thrift::Struct.field_accessor self, :tableName, :row
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROW => {:type => ::Thrift::Types::STRING, :name => 'row'}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # row key
+              ROW => {:type => ::Thrift::Types::STRING, :name => 'row', :binary => true}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetRow_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TRowResult}},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TRowResult}},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetRowWithColumns_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROW = 2
             COLUMNS = 3
 
-            ::Thrift::Struct.field_accessor self, :tableName, :row, :columns
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROW => {:type => ::Thrift::Types::STRING, :name => 'row'},
-                    COLUMNS => {:type => ::Thrift::Types::LIST, :name => 'columns', :element => {:type => ::Thrift::Types::STRING}}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # row key
+              ROW => {:type => ::Thrift::Types::STRING, :name => 'row', :binary => true},
+              # List of columns to return, null for all columns
+              COLUMNS => {:type => ::Thrift::Types::LIST, :name => 'columns', :element => {:type => ::Thrift::Types::STRING, :binary => true}}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetRowWithColumns_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TRowResult}},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TRowResult}},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetRowTs_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROW = 2
             TIMESTAMP = 3
 
-            ::Thrift::Struct.field_accessor self, :tableName, :row, :timestamp
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROW => {:type => ::Thrift::Types::STRING, :name => 'row'},
-                    TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
+              # name of the table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # row key
+              ROW => {:type => ::Thrift::Types::STRING, :name => 'row', :binary => true},
+              # timestamp
+              TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetRowTs_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TRowResult}},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TRowResult}},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetRowWithColumnsTs_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROW = 2
             COLUMNS = 3
             TIMESTAMP = 4
 
-            ::Thrift::Struct.field_accessor self, :tableName, :row, :columns, :timestamp
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROW => {:type => ::Thrift::Types::STRING, :name => 'row'},
-                    COLUMNS => {:type => ::Thrift::Types::LIST, :name => 'columns', :element => {:type => ::Thrift::Types::STRING}},
-                    TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # row key
+              ROW => {:type => ::Thrift::Types::STRING, :name => 'row', :binary => true},
+              # List of columns to return, null for all columns
+              COLUMNS => {:type => ::Thrift::Types::LIST, :name => 'columns', :element => {:type => ::Thrift::Types::STRING, :binary => true}},
+              TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class GetRowWithColumnsTs_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TRowResult}},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TRowResult}},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class MutateRow_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROW = 2
             MUTATIONS = 3
 
-            ::Thrift::Struct.field_accessor self, :tableName, :row, :mutations
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROW => {:type => ::Thrift::Types::STRING, :name => 'row'},
-                    MUTATIONS => {:type => ::Thrift::Types::LIST, :name => 'mutations', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::Mutation}}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # row key
+              ROW => {:type => ::Thrift::Types::STRING, :name => 'row', :binary => true},
+              # list of mutation commands
+              MUTATIONS => {:type => ::Thrift::Types::LIST, :name => 'mutations', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::Mutation}}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class MutateRow_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             IO = 1
             IA = 2
 
-            ::Thrift::Struct.field_accessor self, :io, :ia
             FIELDS = {
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
-                    IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
+              IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class MutateRowTs_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROW = 2
             MUTATIONS = 3
             TIMESTAMP = 4
 
-            ::Thrift::Struct.field_accessor self, :tableName, :row, :mutations, :timestamp
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROW => {:type => ::Thrift::Types::STRING, :name => 'row'},
-                    MUTATIONS => {:type => ::Thrift::Types::LIST, :name => 'mutations', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::Mutation}},
-                    TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # row key
+              ROW => {:type => ::Thrift::Types::STRING, :name => 'row', :binary => true},
+              # list of mutation commands
+              MUTATIONS => {:type => ::Thrift::Types::LIST, :name => 'mutations', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::Mutation}},
+              # timestamp
+              TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class MutateRowTs_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             IO = 1
             IA = 2
 
-            ::Thrift::Struct.field_accessor self, :io, :ia
             FIELDS = {
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
-                    IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
+              IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class MutateRows_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROWBATCHES = 2
 
-            ::Thrift::Struct.field_accessor self, :tableName, :rowBatches
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROWBATCHES => {:type => ::Thrift::Types::LIST, :name => 'rowBatches', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::BatchMutation}}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # list of row batches
+              ROWBATCHES => {:type => ::Thrift::Types::LIST, :name => 'rowBatches', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::BatchMutation}}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class MutateRows_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             IO = 1
             IA = 2
 
-            ::Thrift::Struct.field_accessor self, :io, :ia
             FIELDS = {
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
-                    IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
+              IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class MutateRowsTs_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROWBATCHES = 2
             TIMESTAMP = 3
 
-            ::Thrift::Struct.field_accessor self, :tableName, :rowBatches, :timestamp
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROWBATCHES => {:type => ::Thrift::Types::LIST, :name => 'rowBatches', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::BatchMutation}},
-                    TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # list of row batches
+              ROWBATCHES => {:type => ::Thrift::Types::LIST, :name => 'rowBatches', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::BatchMutation}},
+              # timestamp
+              TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class MutateRowsTs_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             IO = 1
             IA = 2
 
-            ::Thrift::Struct.field_accessor self, :io, :ia
             FIELDS = {
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
-                    IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
+              IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class AtomicIncrement_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROW = 2
             COLUMN = 3
             VALUE = 4
 
-            ::Thrift::Struct.field_accessor self, :tableName, :row, :column, :value
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROW => {:type => ::Thrift::Types::STRING, :name => 'row'},
-                    COLUMN => {:type => ::Thrift::Types::STRING, :name => 'column'},
-                    VALUE => {:type => ::Thrift::Types::I64, :name => 'value'}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # row to increment
+              ROW => {:type => ::Thrift::Types::STRING, :name => 'row', :binary => true},
+              # name of column
+              COLUMN => {:type => ::Thrift::Types::STRING, :name => 'column', :binary => true},
+              # amount to increment by
+              VALUE => {:type => ::Thrift::Types::I64, :name => 'value'}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class AtomicIncrement_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
             IA = 2
 
-            ::Thrift::Struct.field_accessor self, :success, :io, :ia
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::I64, :name => 'success'},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
-                    IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
+              SUCCESS => {:type => ::Thrift::Types::I64, :name => 'success'},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
+              IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class DeleteAll_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROW = 2
             COLUMN = 3
 
-            ::Thrift::Struct.field_accessor self, :tableName, :row, :column
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROW => {:type => ::Thrift::Types::STRING, :name => 'row'},
-                    COLUMN => {:type => ::Thrift::Types::STRING, :name => 'column'}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # Row to update
+              ROW => {:type => ::Thrift::Types::STRING, :name => 'row', :binary => true},
+              # name of column whose value is to be deleted
+              COLUMN => {:type => ::Thrift::Types::STRING, :name => 'column', :binary => true}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class DeleteAll_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :io
             FIELDS = {
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class DeleteAllTs_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROW = 2
             COLUMN = 3
             TIMESTAMP = 4
 
-            ::Thrift::Struct.field_accessor self, :tableName, :row, :column, :timestamp
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROW => {:type => ::Thrift::Types::STRING, :name => 'row'},
-                    COLUMN => {:type => ::Thrift::Types::STRING, :name => 'column'},
-                    TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # Row to update
+              ROW => {:type => ::Thrift::Types::STRING, :name => 'row', :binary => true},
+              # name of column whose value is to be deleted
+              COLUMN => {:type => ::Thrift::Types::STRING, :name => 'column', :binary => true},
+              # timestamp
+              TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class DeleteAllTs_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :io
             FIELDS = {
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class DeleteAllRow_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROW = 2
 
-            ::Thrift::Struct.field_accessor self, :tableName, :row
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROW => {:type => ::Thrift::Types::STRING, :name => 'row'}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # key of the row to be completely deleted.
+              ROW => {:type => ::Thrift::Types::STRING, :name => 'row', :binary => true}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class DeleteAllRow_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :io
             FIELDS = {
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class DeleteAllRowTs_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             ROW = 2
             TIMESTAMP = 3
 
-            ::Thrift::Struct.field_accessor self, :tableName, :row, :timestamp
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    ROW => {:type => ::Thrift::Types::STRING, :name => 'row'},
-                    TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # key of the row to be completely deleted.
+              ROW => {:type => ::Thrift::Types::STRING, :name => 'row', :binary => true},
+              # timestamp
+              TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class DeleteAllRowTs_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :io
             FIELDS = {
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerOpen_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             STARTROW = 2
             COLUMNS = 3
 
-            ::Thrift::Struct.field_accessor self, :tableName, :startRow, :columns
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    STARTROW => {:type => ::Thrift::Types::STRING, :name => 'startRow'},
-                    COLUMNS => {:type => ::Thrift::Types::LIST, :name => 'columns', :element => {:type => ::Thrift::Types::STRING}}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # Starting row in table to scan.
+              # Send "" (empty string) to start at the first row.
+              STARTROW => {:type => ::Thrift::Types::STRING, :name => 'startRow', :binary => true},
+              # columns to scan. If column name is a column family, all
+              # columns of the specified column family are returned. It's also possible
+              # to pass a regex in the column qualifier.
+              COLUMNS => {:type => ::Thrift::Types::LIST, :name => 'columns', :element => {:type => ::Thrift::Types::STRING, :binary => true}}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerOpen_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::I32, :name => 'success'},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::I32, :name => 'success'},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerOpenWithStop_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             STARTROW = 2
             STOPROW = 3
             COLUMNS = 4
 
-            ::Thrift::Struct.field_accessor self, :tableName, :startRow, :stopRow, :columns
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    STARTROW => {:type => ::Thrift::Types::STRING, :name => 'startRow'},
-                    STOPROW => {:type => ::Thrift::Types::STRING, :name => 'stopRow'},
-                    COLUMNS => {:type => ::Thrift::Types::LIST, :name => 'columns', :element => {:type => ::Thrift::Types::STRING}}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # Starting row in table to scan.
+              # Send "" (empty string) to start at the first row.
+              STARTROW => {:type => ::Thrift::Types::STRING, :name => 'startRow', :binary => true},
+              # row to stop scanning on. This row is *not* included in the
+              # scanner's results
+              STOPROW => {:type => ::Thrift::Types::STRING, :name => 'stopRow', :binary => true},
+              # columns to scan. If column name is a column family, all
+              # columns of the specified column family are returned. It's also possible
+              # to pass a regex in the column qualifier.
+              COLUMNS => {:type => ::Thrift::Types::LIST, :name => 'columns', :element => {:type => ::Thrift::Types::STRING, :binary => true}}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerOpenWithStop_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::I32, :name => 'success'},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::I32, :name => 'success'},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerOpenWithPrefix_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             STARTANDPREFIX = 2
             COLUMNS = 3
 
-            ::Thrift::Struct.field_accessor self, :tableName, :startAndPrefix, :columns
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    STARTANDPREFIX => {:type => ::Thrift::Types::STRING, :name => 'startAndPrefix'},
-                    COLUMNS => {:type => ::Thrift::Types::LIST, :name => 'columns', :element => {:type => ::Thrift::Types::STRING}}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # the prefix (and thus start row) of the keys you want
+              STARTANDPREFIX => {:type => ::Thrift::Types::STRING, :name => 'startAndPrefix', :binary => true},
+              # the columns you want returned
+              COLUMNS => {:type => ::Thrift::Types::LIST, :name => 'columns', :element => {:type => ::Thrift::Types::STRING, :binary => true}}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerOpenWithPrefix_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::I32, :name => 'success'},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::I32, :name => 'success'},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerOpenTs_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             STARTROW = 2
             COLUMNS = 3
             TIMESTAMP = 4
 
-            ::Thrift::Struct.field_accessor self, :tableName, :startRow, :columns, :timestamp
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    STARTROW => {:type => ::Thrift::Types::STRING, :name => 'startRow'},
-                    COLUMNS => {:type => ::Thrift::Types::LIST, :name => 'columns', :element => {:type => ::Thrift::Types::STRING}},
-                    TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # Starting row in table to scan.
+              # Send "" (empty string) to start at the first row.
+              STARTROW => {:type => ::Thrift::Types::STRING, :name => 'startRow', :binary => true},
+              # columns to scan. If column name is a column family, all
+              # columns of the specified column family are returned. It's also possible
+              # to pass a regex in the column qualifier.
+              COLUMNS => {:type => ::Thrift::Types::LIST, :name => 'columns', :element => {:type => ::Thrift::Types::STRING, :binary => true}},
+              # timestamp
+              TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerOpenTs_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::I32, :name => 'success'},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::I32, :name => 'success'},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerOpenWithStopTs_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             TABLENAME = 1
             STARTROW = 2
             STOPROW = 3
             COLUMNS = 4
             TIMESTAMP = 5
 
-            ::Thrift::Struct.field_accessor self, :tableName, :startRow, :stopRow, :columns, :timestamp
             FIELDS = {
-                    TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName'},
-                    STARTROW => {:type => ::Thrift::Types::STRING, :name => 'startRow'},
-                    STOPROW => {:type => ::Thrift::Types::STRING, :name => 'stopRow'},
-                    COLUMNS => {:type => ::Thrift::Types::LIST, :name => 'columns', :element => {:type => ::Thrift::Types::STRING}},
-                    TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
+              # name of table
+              TABLENAME => {:type => ::Thrift::Types::STRING, :name => 'tableName', :binary => true},
+              # Starting row in table to scan.
+              # Send "" (empty string) to start at the first row.
+              STARTROW => {:type => ::Thrift::Types::STRING, :name => 'startRow', :binary => true},
+              # row to stop scanning on. This row is *not* included in the
+              # scanner's results
+              STOPROW => {:type => ::Thrift::Types::STRING, :name => 'stopRow', :binary => true},
+              # columns to scan. If column name is a column family, all
+              # columns of the specified column family are returned. It's also possible
+              # to pass a regex in the column qualifier.
+              COLUMNS => {:type => ::Thrift::Types::LIST, :name => 'columns', :element => {:type => ::Thrift::Types::STRING, :binary => true}},
+              # timestamp
+              TIMESTAMP => {:type => ::Thrift::Types::I64, :name => 'timestamp'}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerOpenWithStopTs_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
 
-            ::Thrift::Struct.field_accessor self, :success, :io
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::I32, :name => 'success'},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
+              SUCCESS => {:type => ::Thrift::Types::I32, :name => 'success'},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerGet_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             ID = 1
 
-            ::Thrift::Struct.field_accessor self, :id
             FIELDS = {
-                    ID => {:type => ::Thrift::Types::I32, :name => 'id'}
+              # id of a scanner returned by scannerOpen
+              ID => {:type => ::Thrift::Types::I32, :name => 'id'}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerGet_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
             IA = 2
 
-            ::Thrift::Struct.field_accessor self, :success, :io, :ia
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TRowResult}},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
-                    IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
+              SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TRowResult}},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
+              IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerGetList_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             ID = 1
             NBROWS = 2
 
-            ::Thrift::Struct.field_accessor self, :id, :nbRows
             FIELDS = {
-                    ID => {:type => ::Thrift::Types::I32, :name => 'id'},
-                    NBROWS => {:type => ::Thrift::Types::I32, :name => 'nbRows'}
+              # id of a scanner returned by scannerOpen
+              ID => {:type => ::Thrift::Types::I32, :name => 'id'},
+              # number of results to return
+              NBROWS => {:type => ::Thrift::Types::I32, :name => 'nbRows'}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerGetList_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             SUCCESS = 0
             IO = 1
             IA = 2
 
-            ::Thrift::Struct.field_accessor self, :success, :io, :ia
             FIELDS = {
-                    SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TRowResult}},
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
-                    IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
+              SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => Apache::Hadoop::Hbase::Thrift::TRowResult}},
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
+              IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerClose_args
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             ID = 1
 
-            ::Thrift::Struct.field_accessor self, :id
             FIELDS = {
-                    ID => {:type => ::Thrift::Types::I32, :name => 'id'}
+              # id of a scanner returned by scannerOpen
+              ID => {:type => ::Thrift::Types::I32, :name => 'id'}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
           class ScannerClose_result
-            include ::Thrift::Struct
+            include ::Thrift::Struct, ::Thrift::Struct_Union
             IO = 1
             IA = 2
 
-            ::Thrift::Struct.field_accessor self, :io, :ia
             FIELDS = {
-                    IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
-                    IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
+              IO => {:type => ::Thrift::Types::STRUCT, :name => 'io', :class => Apache::Hadoop::Hbase::Thrift::IOError},
+              IA => {:type => ::Thrift::Types::STRUCT, :name => 'ia', :class => Apache::Hadoop::Hbase::Thrift::IllegalArgument}
             }
 
-            def struct_fields;
-              FIELDS;
-            end
+            def struct_fields; FIELDS; end
 
             def validate
             end
 
+            ::Thrift::Struct.generate_accessors self
           end
 
         end
